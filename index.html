@@ -39,7 +39,7 @@ tailwind.config = {
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
 abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike,
 strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
-caption, tbody, tfoot, textad, th, td, article, aside, canvas, details, embed, figure, figcaption,
+caption, tbody, textad, th, td, article, aside, canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video,
 button, input, textarea, select {
   font-family: 'Mitr', sans-serif !important;
@@ -138,12 +138,14 @@ body {
     </div>
   </nav>
 
+  <!-- [คงไว้ 100%] ส่วน Badges (ปุ่มกลมเล็กๆ ด้านบน) -->
   <div class="flex justify-center gap-2 mb-1">
     <span class="bg-white/80 border border-brand-base text-brand-dark text-[11px] px-3 py-1 rounded-full shadow-sm font-medium">🌸 สดใส</span>
     <span class="bg-white/80 border border-brand-base text-brand-dark text-[11px] px-3 py-1 rounded-full shadow-sm font-medium">⭐ Google Sheet</span>
     <span class="bg-white/80 border border-brand-base text-brand-dark text-[11px] px-3 py-1 rounded-full shadow-sm font-medium">💖 ใช้งานง่าย</span>
   </div>
 
+  <!-- [คงไว้ 100%] Status Bar (แถบเช็คคิวงาน) และ ปุ่มเช็คคิวงานแบบเส้นประ -->
   <div class="bento-card p-4 flex flex-col gap-3">
     <div class="flex justify-between items-center text-xs">
       <span class="flex items-center gap-1.5 font-medium">
@@ -159,6 +161,7 @@ body {
     </a>
   </div>
 
+  <!-- [คงไว้ 100%] โครงสร้าง header ทั้งหมด -->
   <header class="bento-card text-center relative overflow-hidden">
     <svg class="absolute -top-10 -right-10 text-brand-accent/40 w-40 h-40 rotate-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
     <div class="relative z-10">
@@ -176,36 +179,38 @@ body {
       </p>
     </div>
   </header>
+
+  <!-- เปลี่ยนรายละเอียดเนื้อหาแทนของเดิม โดยโครงสร้าง HTML Element เดิมอยู่ครบ 100% -->
   <div class="grid grid-cols-2 gap-4">
     <div class="bento-card flex flex-col justify-center items-center text-center p-5">
-      <p class="font-eng text-xs text-brand-dark/60 font-semibold uppercase tracking-wider mb-1">แนะนำให้ทำ</p>
+      <p class="font-eng text-xs text-brand-dark/60 font-semibold uppercase tracking-wider mb-1">ข้อแนะนำสำคัญ</p>
       <div class="flex items-baseline gap-1 mb-2">
-        <span class="text-2xl font-bold text-brand-dark">สำคัญ</span>
+        <span class="text-2xl font-bold text-brand-dark">โปรดอ่าน</span>
       </div>
-      <p class="text-[10px] leading-tight text-brand-dark/70">ทำใน Google Chrome<br>หรือ Safari เป็นหลัก</p>
+      <p class="text-[10px] leading-tight text-brand-dark/70">เปิดลิงก์ผ่านเบราว์เซอร์<br>Chrome หรือ Safari เท่านั้น</p>
     </div>
     <div class="bento-card flex flex-col justify-center p-4">
       <h3 class="text-sm font-semibold mb-2 flex items-center gap-1.5">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-        การเข้าถึงทั่วไป
+        สิทธิ์เริ่มต้นของไฟล์
       </h3>
       <ul class="text-[11px] space-y-1.5 text-brand-dark/80">
-        <li class="flex justify-between"><span>สิทธิ์การเข้าถึง</span><span class="font-medium text-green-600">ทุกคนที่มีลิงก์</span></li>
-        <li class="flex justify-between"><span>บทบาท</span><span class="font-medium text-brand-dark">ผู้มีสิทธิ์อ่าน</span></li>
+        <li class="flex justify-between"><span>การเข้าถึงชีท</span><span class="font-medium text-green-600">ทุกคนที่มีลิงก์</span></li>
+        <li class="flex justify-between"><span>ข้อกำหนดสิทธิ์</span><span class="font-medium text-brand-dark">ผู้มีสิทธิ์อ่านเท่านั้น</span></li>
       </ul>
     </div>
     <div class="bento-card col-span-2 bg-gradient-to-br from-brand-base/20 to-brand-accent/40 border-brand-base/30 relative overflow-hidden">
-      <div class="absolute top-3 right-3 bg-brand-dark text-white text-[10px] font-eng font-bold px-2 py-1 rounded-md">READY</div>
-      <h3 class="text-base font-semibold mb-1">สถานะไฟล์ชีท</h3>
-      <p class="text-xl font-bold text-brand-dark mb-3">คัดลอกแล้วพร้อมใช้งานทันที</p>
+      <div class="absolute top-3 right-3 bg-brand-dark text-white text-[10px] font-eng font-bold px-2 py-1 rounded-md">READ</div>
+      <h3 class="text-base font-semibold mb-1">คำแนะนำการใช้งานเบื้องต้น</h3>
+      <p class="text-xl font-bold text-brand-dark mb-3">โปรดทำสำเนาก่อนเริ่มพิมพ์ข้อมูล</p>
       <div class="grid grid-cols-1 gap-2 text-xs text-brand-dark/80">
         <div class="flex items-start gap-2 bg-white/50 p-2 rounded-lg">
           <svg class="w-4 h-4 text-brand-base shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          ทำสำเนาเก็บไว้ในไดรฟ์ตัวเอง
+          ไฟล์ต้นฉบับจะล็อกสิทธิ์ไว้เพื่อไม่ให้สูตรเสียหาย ลูกค้าต้องทำสำเนาลงไดรฟ์ของตัวเองก่อน
         </div>
         <div class="flex items-start gap-2 bg-white/50 p-2 rounded-lg">
           <svg class="w-4 h-4 text-brand-base shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          ตั้งค่าปิดการแก้ไขจากผู้อื่นเพื่อความปลอดภัย
+          แนะนำให้ตั้งค่าปิดสิทธิ์การแก้ไขจากผู้อื่นเพื่อความปลอดภัยและป้องกันข้อมูลรั่วไหล
         </div>
       </div>
     </div>
@@ -214,37 +219,37 @@ body {
   <div id="price" class="bento-card">
     <h3 class="text-sm font-semibold mb-3 flex items-center gap-2">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-      ข้อมูลสำคัญหลังจากทำสำเนา
+      ข้อควรระวังสำคัญสำหรับลูกค้า
     </h3>
     <div class="space-y-2 text-xs border-l-2 border-brand-base pl-3">
-      <p class="text-brand-dark/90 font-medium">⚠️ จะทำหรือไม่ทำก็ได้แต่ทางร้านแนะนำให้ทำ (สำคัญมาก)</p>
-      <p class="text-brand-dark/70 pt-1">เพื่อความปลอดภัยของข้อมูล และไม่ให้บุคคลอื่นเข้ามาแก้ไขสูตรหรือโครงสร้างไฟล์ของท่านได้ในภายหลัง</p>
+      <p class="text-brand-dark/90 font-medium">⚠️ โปรดทำตามขั้นตอนในคู่มืออย่างละเอียด (เพื่อประโยชน์ของลูกค้า)</p>
+      <p class="text-brand-dark/70 pt-1">การขอกดสิทธิ์แก้ไขจากไฟล์ต้นฉบับโดยตรง จะทำให้ระบบปฏิเสธการเข้าถึงอัตโนมัติ ดังนั้นการกด "ทำสำเนา" จึงเป็นวิธีที่ถูกต้องและปลอดภัยที่สุดค่ะ</p>
     </div>
   </div>
 
   <div id="work" class="bento-card p-0 overflow-hidden">
     <div class="p-5 pb-3 border-b border-white/50">
-      <h2 class="font-eng text-xl font-bold text-brand-dark">Templates</h2>
-      <p class="text-xs text-brand-dark/70 mt-1">หมวดหมู่ไฟล์และตัวอย่างบริการของทางร้าน</p>
+      <h2 class="font-eng text-xl font-bold text-brand-dark">รายละเอียดคู่มือ</h2>
+      <p class="text-xs text-brand-dark/70 mt-1">ภาพรวมและข้อมูลสำคัญที่คุณควรรู้ก่อนการตั้งค่า</p>
     </div>
     <div class="flex p-3 gap-2 bg-brand-light/30">
-      <button onclick="switchTab('bright')" id="btn-bright" class="tab-btn active flex-1 py-2 text-xs font-medium rounded-xl border border-brand-accent text-brand-dark bg-white transition">Google Sheet</button>
-      <button onclick="switchTab('dark')" id="btn-dark" class="tab-btn flex-1 py-2 text-xs font-medium rounded-xl border border-brand-accent text-brand-dark bg-white transition">โทนชมพู</button>
-      <button onclick="switchTab('pastel')" id="btn-pastel" class="tab-btn flex-1 py-2 text-xs font-medium rounded-xl border border-brand-accent text-brand-dark bg-white transition">คู่มือแนะนำ</button>
+      <button onclick="switchTab('bright')" id="btn-bright" class="tab-btn active flex-1 py-2 text-xs font-medium rounded-xl border border-brand-accent text-brand-dark bg-white transition">ทำสำเนาไฟล์</button>
+      <button onclick="switchTab('dark')" id="btn-dark" class="tab-btn flex-1 py-2 text-xs font-medium rounded-xl border border-brand-accent text-brand-dark bg-white transition">ความปลอดภัย</button>
+      <button onclick="switchTab('pastel')" id="btn-pastel" class="tab-btn flex-1 py-2 text-xs font-medium rounded-xl border border-brand-accent text-brand-dark bg-white transition">การนำไปใช้</button>
     </div>
     <div id="tab-bright" class="p-4 max-h-[150px] overflow-y-auto">
       <div class="work-link">
-        <span class="text-sm">ไฟล์พร้อมใช้ระบบออโตเมติก <span class="font-eng font-semibold ml-1">V.1</span></span>
+        <span class="text-sm">เรียนรู้วิธีการคัดลอกไฟล์ลง Google Drive ของคุณ <span class="font-eng font-semibold ml-1">พาร์ท 1</span></span>
       </div>
     </div>
     <div id="tab-dark" class="p-4 max-h-[150px] overflow-y-auto hidden">
       <div class="work-link">
-        <span class="text-sm">ดีไซน์สวยงาม น่ารัก สไตล์เกาหลี <span class="font-eng font-semibold ml-1">V.2</span></span>
+        <span class="text-sm">วิธีล็อกไฟล์ป้องกันบุคคลอื่นเข้ามาแอบแก้ไขสูตรระบบ <span class="font-eng font-semibold ml-1">พาร์ท 2</span></span>
       </div>
     </div>
     <div id="tab-pastel" class="p-4 max-h-[150px] overflow-y-auto hidden">
       <div class="work-link">
-        <span class="text-sm">คู่มือขั้นตอนละเอียด <span class="font-eng font-semibold ml-1">V.3</span></span>
+        <span class="text-sm">การคัดลอกลิงก์ส่วนตัวไปเปิดใช้งานบนแพลตฟอร์มต่างๆ <span class="font-eng font-semibold ml-1">พาร์ท 3</span></span>
       </div>
     </div>
   </div>
