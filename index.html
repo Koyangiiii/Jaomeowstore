@@ -86,83 +86,13 @@ body {
   box-shadow: 0 4px 30px rgba(255, 182, 193, 0.2);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-/* เมนูแบบ Pill ด้านบน */
-.floating-nav {
-  position: sticky;
-  top: 1rem;
-  z-index: 50;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  border-radius: 999px;
-  padding: 0.5rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 20px rgba(70, 43, 33, 0.08);
-  margin-bottom: 1rem;
-}
-/* Tab Styles */
-.tab-btn.active {
-  background-color: #FFB6C1 !important;
-  color: #462B21 !important;
-  font-weight: 500;
-}
-.work-link {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.8rem 1rem;
-  background: rgba(255, 255, 255, 0.5);
-  border: 1px solid #FFE4E1;
-  border-radius: 1rem;
-  margin-bottom: 0.5rem;
-  text-decoration: none;
-  transition: all 0.2s;
-}
-.work-link:active {
-  transform: scale(0.98);
-  background: #FFE4E1;
-}
 </style>
 </head>
 <body>
 <div class="container-box">
-  <nav class="floating-nav">
-    <span class="font-eng font-semibold text-lg text-brand-dark tracking-wide pl-2">JaoMeow</span>
-    <div class="flex gap-2 font-eng text-sm">
-      <a href="#work" class="px-3 py-1.5 rounded-full hover:bg-brand-accent/50 transition font-medium">Guide</a>
-      <a href="#price" class="px-3 py-1.5 rounded-full hover:bg-brand-accent/50 transition font-medium">Notice</a>
-      <a href="#contact" class="px-3 py-1.5 bg-brand-base text-brand-dark rounded-full font-medium">Contact</a>
-    </div>
-  </nav>
-
-  <!-- [คงไว้ 100%] ส่วน Badges (ปุ่มกลมเล็กๆ ด้านบน) -->
-  <div class="flex justify-center gap-2 mb-1">
-    <span class="bg-white/80 border border-brand-base text-brand-dark text-[11px] px-3 py-1 rounded-full shadow-sm font-medium">🌸 สดใส</span>
-    <span class="bg-white/80 border border-brand-base text-brand-dark text-[11px] px-3 py-1 rounded-full shadow-sm font-medium">⭐ Google Sheet</span>
-    <span class="bg-white/80 border border-brand-base text-brand-dark text-[11px] px-3 py-1 rounded-full shadow-sm font-medium">💖 ใช้งานง่าย</span>
-  </div>
-
-  <!-- [คงไว้ 100%] Status Bar (แถบเช็คคิวงาน) และ ปุ่มเช็คคิวงานแบบเส้นประ -->
-  <div class="bento-card p-4 flex flex-col gap-3">
-    <div class="flex justify-between items-center text-xs">
-      <span class="flex items-center gap-1.5 font-medium">
-        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> สถานะระบบคิวงาน
-      </span>
-      <span class="text-brand-dark/60 font-eng">Update Today</span>
-    </div>
-    <div class="w-full bg-brand-light rounded-full h-2.5 overflow-hidden border border-brand-accent">
-      <div class="bg-brand-base h-2.5 rounded-full" style="width: 100%"></div>
-    </div>
-    <a href="#contact" class="border-2 border-dashed border-brand-base/70 rounded-xl p-2.5 text-center text-xs font-medium bg-white/40 hover:bg-white/70 transition block">
-      🔍 คลิกที่นี่เพื่อติดต่อสอบถามคิวงาน / ทักแชทสอบถาม
-    </a>
-  </div>
 
   <!-- [คงไว้ 100%] โครงสร้าง header ทั้งหมด (ส่วนชื่อร้าน) -->
-  <header class="bento-card text-center relative overflow-hidden">
+  <header class="bento-card text-center relative overflow-hidden mt-4">
     <svg class="absolute -top-10 -right-10 text-brand-accent/40 w-40 h-40 rotate-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
     <div class="relative z-10">
       <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-[3px] border-white shadow-sm bg-brand-accent/30 flex items-center justify-center">
@@ -177,24 +107,9 @@ body {
     </div>
   </header>
 
-  <footer class="text-center text-[10px] text-brand-dark/50 font-eng pb-6">
+  <footer class="text-center text-[10px] text-brand-dark/50 font-eng pb-6 mt-4">
     &copy; 2026 JaoMeow Store.
   </footer>
 </div>
-
-<script>
-function switchTab(tabId) {
-  document.getElementById('tab-bright').classList.add('hidden');
-  document.getElementById('tab-dark').classList.add('hidden');
-  document.getElementById('tab-pastel').classList.add('hidden');
-  
-  document.getElementById('btn-bright').classList.remove('active');
-  document.getElementById('btn-dark').classList.remove('active');
-  document.getElementById('btn-pastel').classList.remove('active');
-  
-  document.getElementById('tab-' + tabId).classList.remove('hidden');
-  document.getElementById('btn-' + tabId).classList.add('active');
-}
-</script>
 </body>
 </html>
